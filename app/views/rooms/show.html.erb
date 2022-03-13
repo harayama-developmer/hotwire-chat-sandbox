@@ -1,0 +1,20 @@
+<%= turbo_stream_from @room %>
+
+<div id="room-detail">
+  <%= turbo_frame_tag "room" do %>
+    <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+      <%= link_to "Back to rooms", rooms_path, class: "btn btn-primary-outline", data: { turbo_frame: "_top" } %>
+      <%= link_to "Edit this room", edit_room_path(@room), class: "btn btn-primary" %>
+      <%= button_to "Destroy this room", @room, method: :delete, class: "btn btn-danger", form: { data: { turbo_confirm: "Are you sure?", turbo_frame: "_top" }} %>
+    </div>
+    <%= render partial: "rooms/room_detail", locals: { room: @room } %>
+  <% end %>
+
+  <h3>Messages</h3>
+
+  <div id="messages">
+    <%= render @room.messages %>
+  </div>
+
+  <%= turbo_frame_tag "new_message", src: new_room_message_path(@room), target: "_top" %>
+</div>

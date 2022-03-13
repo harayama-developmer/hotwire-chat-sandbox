@@ -1,0 +1,44 @@
+/* Turbo frame for debug */
+
+ turbo-frame {
+    display: block;
+    border: 1px solid blue;
+ }
+
+/* Components */
+
+.btn {
+  color: #000000;
+  border: 1px solid;
+  border-color: #000000;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  padding: 5px 10px;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.btn:hover {
+  opacity: .8;
+}
+
+.btn-primary {
+  color: #ffffff;
+  border-color: #000fff;
+  background-color: #000fff;
+}
+
+.btn-danger {
+  color: #ffffff;
+  border-color: #ff0000;
+  background-color: #ff0000;
+}
+
+.btn-primary-outline {
+  color: #000fff;
+  border-color: #000fff;
+  background-color: #ffffff;
+}

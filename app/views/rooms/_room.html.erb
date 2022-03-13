@@ -1,0 +1,10 @@
+<div id="<%= dom_id room %>">
+  <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 10px;">
+    <p>
+      <%= link_to room.name, room %>
+    </p>
+    <p style="color: gray;">
+      <%= "(#{room.messages_count} messages)" %>
+    </p>
+  </div>
+</div>

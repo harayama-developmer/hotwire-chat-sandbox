@@ -1,0 +1,10 @@
+<%= turbo_stream_from "room-list" %>
+
+<div style="display: flex; align-items: center; justify-content: space-between;">
+  <h1>Rooms</h1>
+  <%= link_to "New room", new_room_path, class: "btn btn-primary" %>
+</div>
+
+<div id="rooms">
+  <%= render @rooms %>
+</div>

@@ -1,0 +1,6 @@
+<p id="<%= dom_id message %>" style="margin-bottom: 0;">
+  <%= message.content %>
+</p>
+<p style="color: gray; font-size: 0.8rem; text-align: right;">
+  <%= time_ago_in_words(message.created_at) %>
+</p>
