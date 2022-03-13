@@ -1,7 +1,7 @@
 <%= turbo_frame_tag "new_message", target: "_top" do %>
   <%= form_with(model: [@message.room, @message], data: { controller: "reset-form", action: "turbo:submit-end->reset-form#reset" }) do |form| %>
     <div>
-      <%= form.text_field :content, class: "display: block; font-size: 1rem; line-height: 1.5; padding: 5px 10px;" %>
+      <%= form.text_field :content, autocomplete: "off", class: "display: block; font-size: 1rem; line-height: 1.5; padding: 5px 10px;" %>
       <%= form.submit "Send", class: "btn btn-primary" %>
     </div>
   <% end %>
